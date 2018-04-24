@@ -45,9 +45,8 @@ public class DeleteProductServlet extends HttpServlet {
 
             // removing from DataBase [unnecessary]
             DBProduct dbProduct = new DBProduct();
-            PreparedStatement preparedStatement = null;
             try {
-                preparedStatement = dbProduct.getConnection().prepareStatement(QUERY_DELETE_OLD);
+                PreparedStatement preparedStatement = dbProduct.getConnection().prepareStatement(QUERY_DELETE_OLD);
 
                 preparedStatement.setInt(1, marking);
 

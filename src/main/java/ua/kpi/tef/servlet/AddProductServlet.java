@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,9 +56,8 @@ public class AddProductServlet extends HttpServlet {
 
             // adding to DataBase [unnecessary]
             DBProduct dbProduct = new DBProduct();
-            PreparedStatement preparedStatement = null;
             try {
-                preparedStatement = dbProduct.getConnection().prepareStatement(QUERY_INSERT_NEW);
+                PreparedStatement preparedStatement = dbProduct.getConnection().prepareStatement(QUERY_INSERT_NEW);
 
                 preparedStatement.setInt(1, marking);
                 preparedStatement.setString(2, title);
