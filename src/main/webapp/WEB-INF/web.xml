@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!--Index page of the app-->
+  <servlet-mapping>
+    <servlet-name>GetStartPageServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetStartPageServlet</servlet-name>
+    <servlet-class>ua.kpi.tef.servlet.GetIndexPageServlet</servlet-class>
+  </servlet>
+
+  <!-- Add product -->
+  <servlet-mapping>
+    <servlet-name>AddSubscriberServlet</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddSubscriberServlet</servlet-name>
+    <servlet-class>ua.kpi.tef.servlet.AddProductServlet</servlet-class>
+  </servlet>
+
+  <!--Delete product-->
+  <servlet-mapping>
+    <servlet-name>DeleteSubscriberServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteSubscriberServlet</servlet-name>
+    <servlet-class>ua.kpi.tef.servlet.DeleteProductServlet</servlet-class>
+  </servlet>
+
+</web-app>
