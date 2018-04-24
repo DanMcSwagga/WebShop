@@ -3,8 +3,6 @@ package ua.kpi.tef.servlet;
 import ua.kpi.tef.model.entity.DBProduct;
 import ua.kpi.tef.model.entity.Product;
 
-import ua.kpi.tef.util.Utils;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
